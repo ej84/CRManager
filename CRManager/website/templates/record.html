@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <div class="card mb-3" style="max-width: 800px;">
+        <div class="row justify-content-center g-0">
+        <div class="col-md-4">
+            <img src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651_1280.png" class="img-fluid rounded-start" alt="user profile">
+        </div>
+        <div class="col-md-8 bg-success text-white">
+            <div class="card-body mx-md-4">
+            <h5 class="card-title">{{ customer_record.first_name }} {{ customer_record.last_name }}</h5>
+            <p class="card-text">
+                <strong>Email: </strong>{{ customer_record.email }}<br>
+                <strong>Phone: </strong>{{ customer_record.phone }}<br>
+                <strong>Street Address: </strong>{{ customer_record.address }}<br>
+                <strong>City: </strong>{{ customer_record.city }}<br>
+                <strong>State: </strong>{{ customer_record.state }}<br>
+                <strong>Zip Code: </strong>{{ customer_record.zipcode }}<br>
+                <strong>Registered At: </strong>{{ customer_record.created_at }}<br>
+                <strong>Customer ID: </strong>{{ customer_record.id }}
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-dark">Go Back</a>
+    <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete</a>
+</div>
+<br>
+
+
+{% endblock %}
