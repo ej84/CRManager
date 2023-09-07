@@ -5,14 +5,15 @@
     <h1>Add New Record</h1>
     <br>
 
-    <form method="POST" action="{% url 'home' %}">
+    <form method="POST" action="{% url 'new_record' %}">
         {% csrf_token %}
 
         {{ form.as_p }}
         
     <br>
         <button type="submit" class="btn btn-secondary">Add Record</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 
-{% endblock %}5417-1625
+{% endblock %}
