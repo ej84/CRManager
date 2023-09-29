@@ -1,0 +1,25 @@
+Set up the project from start
+
+1.Create a project folder.
+
+2.Open the powershell and use cd command to move to the new folder.
+
+3.Use the following commands:
+
+-pip install virtualenv to install virtual environment package.
+
+-python -m virtualenv . to create and setup virtual environment with python3.
+
+-.\Scripts\activate to enter the virtualenv mode. If this doesn't work,
+
+use this: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted.
+
+-pip freeze to see the django version.(optional)
+
+-mkdir src to create source folder inside and use cd src to move.
+
+-django-admin startproject (project folder name) to create new project and
+
+manage.py file.
+
+-python manage.py runserver to migrate everything and start the local server.

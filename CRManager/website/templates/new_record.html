@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="col-md-6 offset-md-3">
-    <h1>Add New Record</h1>
+    <h1>New Customer</h1>
     <br>
 
     <form method="POST" action="{% url 'new_record' %}">
@@ -11,7 +11,7 @@
         {{ form.as_p }}
         
     <br>
-        <button type="submit" class="btn btn-secondary">Add Record</button>
+        <button type="submit" class="btn btn-dark">Add New Customer</button>
         <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>

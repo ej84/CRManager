@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="col-md-6 offset-md-3">
-    <h1>Update Your Record</h1>
+    <h1>Edit Customer Info</h1>
     <br>
 
     <form method="POST">
@@ -11,7 +11,7 @@
         {{ form.as_p }}
         
         <br>
-        <button type="submit" class="btn btn-success">Update</button>
+        <button type="submit" class="btn btn-success">Save</button>
         <a href="{% url 'record' current_record.id %}" class="btn btn-secondary">Cancel</a>
     </form>
 
